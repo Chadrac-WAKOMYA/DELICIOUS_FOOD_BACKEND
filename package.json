@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Chadrac-WAKOMYA/DELICIOUS_FOOD_BACKEND/issues"
   },
-  "homepage": "https://github.com/Chadrac-WAKOMYA/DELICIOUS_FOOD_BACKEND#readme"
+  "homepage": "https://github.com/Chadrac-WAKOMYA/DELICIOUS_FOOD_BACKEND#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
