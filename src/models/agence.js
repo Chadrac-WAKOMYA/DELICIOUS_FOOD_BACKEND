@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             validate:{
                 isUrl : { msg: 'Utiliser uniquement les URL valides pour les images' },
-                notNull : { msg: '\'email\' est une propriete requise' }
+                notNull : { msg: '\'logo\' est une propriete requise' }
             }
           },
         password: {
