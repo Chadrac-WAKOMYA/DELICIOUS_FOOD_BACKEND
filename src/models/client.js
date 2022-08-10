@@ -71,7 +71,7 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         lastConnection: {
-            type: DataTypes.timestamps,
+            type: DataTypes.DATE,
             allowNull: false,
             validate:{
                 notEmpty : { msg: '\'lastConnection\' ne doit pas être vide' },
