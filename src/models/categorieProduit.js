@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
                 notEmpty : { msg: '\'designation\' ne doit pas être vide' },
                 notNull : { msg: '\'designation\' est une propriété requise' }
             }
-        },
+        }
     }, {
         timestamps: true,
         createdAt: 'created',
