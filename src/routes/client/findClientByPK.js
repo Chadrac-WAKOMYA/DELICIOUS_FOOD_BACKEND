@@ -1,7 +1,7 @@
 const { Client } = require('../../db/sequelize')
   
 module.exports = (app) => {
-  app.get('/api/pokemons/:id', (req, res) => {
+  app.get('/delicious_food_api/clients/:id', (req, res) => {
     Client.findByPk(req.params.id)
       .then(client => {
         if(client === null){
