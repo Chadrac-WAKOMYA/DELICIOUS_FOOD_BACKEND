@@ -23,6 +23,8 @@ require('./src/routes/bareme/createBareme')(app)
 require('./src/routes/bareme/findAllBaremes')(app)
 require('./src/routes/bareme/findAllBaremeByPK')(app)
 require('./src/routes/bareme/updateBareme')(app)
+require('./src/routes/bareme/deleteBareme')(app)
+
 
 
 app.get('/delicious_food_api/home', (req, res) => {
