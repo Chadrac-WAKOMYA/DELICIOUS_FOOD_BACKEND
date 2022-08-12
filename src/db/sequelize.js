@@ -2,6 +2,7 @@ const { Sequelize, DataTypes } = require('sequelize')
 const ClientModel = require('../models/client')
 const BaremeModel = require('../models/baremeLivraison')
 const CommandeModel = require('../models/commande')
+const AgenceModel = require('../models/agence')
 
 const sequelize = new Sequelize('delicious_food_db', 'root', '', {
   host: 'localhost',
@@ -15,9 +16,10 @@ const sequelize = new Sequelize('delicious_food_db', 'root', '', {
 const Client = ClientModel(sequelize,DataTypes)
 const Bareme = BaremeModel(sequelize,DataTypes)
 const Commande = CommandeModel(sequelize,DataTypes)
+const Agence = AgenceModel(sequelize,DataTypes)
 
 const initDb = () => {
-    return sequelize.sync({force: true}).then(_ => { 
+    return sequelize.sync({force: false}).then(_ => { 
         // Client.create({
         // }).then(client => console.log(client.toJSON()))
       console.log('La base de donnée a bien été initialisée !')
@@ -25,5 +27,5 @@ const initDb = () => {
   }
 
 module.exports = { 
-  initDb, Client, Bareme, Commande
+  initDb, Client, Bareme, Commande, Agence
 }
