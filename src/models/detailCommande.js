@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    return sequelize.define('tb_categorie_produit', {
+    return sequelize.define('tb_detail_commande', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -24,6 +24,10 @@ module.exports = (sequelize, DataTypes) => {
         refCommande: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_commandes",
+                key : "id"
+            },
             validate:{
                 isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
                 notNull : { msg: '\'refCommande\' est une propriete requise' }
@@ -32,6 +36,10 @@ module.exports = (sequelize, DataTypes) => {
         refProduit: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_produits",
+                key : "id"
+            },
             validate:{
                 isInt : { msg: 'Uniquement les nombres entiers sont valides pour refCategorie' },
                 notNull : { msg: '\'refProduit\' est une propriete requise' }

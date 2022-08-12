@@ -38,6 +38,11 @@ require('./src/routes/produit/createProduit')(app)
 require('./src/routes/produit/findAllProduits')(app)
 
 require('./src/routes/imageProduit/createImageProduit')(app)
+require('./src/routes/imageProduit/findAllImageProduits')(app)
+
+require('./src/routes/detailCommande/createDetailCommande')(app)
+
+
 
 
 app.get('/delicious_food_api/home', (req, res) => {

@@ -6,6 +6,7 @@ const AgenceModel = require('../models/agence')
 const CategorieProduitModel = require('../models/categorieProduit')
 const ProduitModel = require('../models/produit')
 const ImageProduitModel = require('../models/imageProduit')
+const DetailCommandeModel = require('../models/detailCommande')
 
 const sequelize = new Sequelize('delicious_food_db', 'root', '', {
   host: 'localhost',
@@ -23,6 +24,7 @@ const Agence = AgenceModel(sequelize,DataTypes)
 const CategorieProduit = CategorieProduitModel(sequelize,DataTypes)
 const Produit = ProduitModel(sequelize,DataTypes)
 const ImageProduit = ImageProduitModel(sequelize,DataTypes)
+const DetailCommande  = DetailCommandeModel(sequelize,DataTypes)
 
 const initDb = () => {
     return sequelize.sync({force: false}).then(_ => { 
@@ -33,5 +35,5 @@ const initDb = () => {
   }
 
 module.exports = { 
-  initDb, Client, Bareme, Commande, Agence, CategorieProduit, Produit, ImageProduit
+  initDb, Client, Bareme, Commande, Agence, CategorieProduit, Produit, ImageProduit, DetailCommande
 }
