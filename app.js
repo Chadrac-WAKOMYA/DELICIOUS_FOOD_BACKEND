@@ -31,6 +31,10 @@ require('./src/routes/commande/findAllCommandes')(app)
 require('./src/routes/agence/createAgence')(app)
 require('./src/routes/agence/findAllAgences')(app)
 
+require('./src/routes/categorieProduit/createCategorieProduit')(app)
+
+
+
 app.get('/delicious_food_api/home', (req, res) => {
     res.json({ msg: 'server runs well'})
 })
