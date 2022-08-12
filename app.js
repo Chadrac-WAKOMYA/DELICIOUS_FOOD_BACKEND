@@ -10,7 +10,7 @@ app
     .use(morgan('dev'))
     .use(bodyParser.json())
 
-sequelize.initDb()
+// sequelize.initDb()
     
 // Ici nos futurs point de terminaison
 require('./src/routes/client/createClient')(app)
@@ -26,6 +26,7 @@ require('./src/routes/bareme/updateBareme')(app)
 require('./src/routes/bareme/deleteBareme')(app)
 
 require('./src/routes/commande/createCommande')(app)
+require('./src/routes/commande/findAllCommandes')(app)
 
 
 
