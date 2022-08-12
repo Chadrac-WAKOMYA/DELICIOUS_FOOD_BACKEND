@@ -33,6 +33,10 @@ module.exports = (sequelize, DataTypes) => {
         refAgence: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_agences",
+                key : "id"
+            },
             validate:{
                 isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
                 notNull : { msg: '\'refAgence\' est une propriete requise' }
@@ -41,6 +45,10 @@ module.exports = (sequelize, DataTypes) => {
         refCategorie: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_categorie_produits",
+                key : "id"
+            },
             validate:{
                 isInt : { msg: 'Uniquement les nombres entiers sont valides pour refCategorie' },
                 notNull : { msg: '\'refCategorie\' est une propriete requise' }
