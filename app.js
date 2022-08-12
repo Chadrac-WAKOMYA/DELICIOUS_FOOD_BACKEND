@@ -32,6 +32,7 @@ require('./src/routes/agence/createAgence')(app)
 require('./src/routes/agence/findAllAgences')(app)
 
 require('./src/routes/categorieProduit/createCategorieProduit')(app)
+require('./src/routes/categorieProduit/findAllCategorieProduits')(app)
 
 
 
