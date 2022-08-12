@@ -1,5 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize')
 const ClientModel = require('../models/client')
+const BaremeModel = require('../models/baremeLivraison')
 
 const sequelize = new Sequelize('delicious_food_db', 'root', '', {
   host: 'localhost',
@@ -11,6 +12,7 @@ const sequelize = new Sequelize('delicious_food_db', 'root', '', {
 })
 
 const Client = ClientModel(sequelize,DataTypes)
+const Bareme = BaremeModel(sequelize,DataTypes)
 
 const initDb = () => {
     return sequelize.sync({force: true}).then(_ => { 
@@ -21,5 +23,5 @@ const initDb = () => {
   }
 
 module.exports = { 
-  initDb, Client
+  initDb, Client, Bareme
 }

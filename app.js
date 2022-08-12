@@ -12,12 +12,15 @@ app
 
 sequelize.initDb()
     
-// Ici nous placerons nos futurs point de terminaison
+// Ici nos futurs point de terminaison
 require('./src/routes/client/createClient')(app)
 require('./src/routes/client/findAllClients')(app)
 require('./src/routes/client/updateClient')(app)
 require('./src/routes/client/findClientByPK')(app)
 require('./src/routes/client/deleteClient')(app)
+
+require('./src/routes/bareme/createBareme')(app)
+require('./src/routes/bareme/findAllBaremes')(app)
 
 
 app.get('/delicious_food_api/home', (req, res) => {
