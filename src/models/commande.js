@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true
         },
         dateCommande: {
-            type: DataTypes.timestamps,
+            type: DataTypes.DATE,
             allowNull: false,
             validate:{
                 notEmpty : { msg: '\'dateCommande\' ne doit pas être vide' },
@@ -48,6 +48,10 @@ module.exports = (sequelize, DataTypes) => {
         refClient: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_clients",
+                key : "id"
+            },
             validate:{
                 isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
                 notNull : { msg: '\'refClient\' est une propriete requise' }
@@ -56,6 +60,10 @@ module.exports = (sequelize, DataTypes) => {
         refBareme: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_bareme_livraisons",
+                key : "id"
+            },
             validate:{
                 isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
                 notNull : { msg: '\'refBareme\' est une propriete requise' }
