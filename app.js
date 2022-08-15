@@ -48,6 +48,7 @@ require('./src/routes/notationProduit/createNotationProduit')(app)
 require('./src/routes/notationProduit/findAllNotationProduits')(app)
 
 require('./src/routes/statsVisualize/createStatsVisualize')(app)
+require('./src/routes/statsVisualize/findAllStatsVisualizes')(app)
 
 
 
