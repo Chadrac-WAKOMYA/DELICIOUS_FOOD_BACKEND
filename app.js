@@ -44,6 +44,8 @@ require('./src/routes/detailCommande/createDetailCommande')(app)
 require('./src/routes/detailCommande/findAllDetailCommandes')(app)
 
 
+require('./src/routes/notationProduit/createNotationProduit')(app)
+
 
 
 app.get('/delicious_food_api/home', (req, res) => {
