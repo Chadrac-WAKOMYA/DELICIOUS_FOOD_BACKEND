@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
             }
           },
           lastConnection: {
-            type: DataTypes.timestamps,
+            type: DataTypes.DATE,
             allowNull: false,
             validate:{
                 notEmpty : { msg: '\'lastConnection\' ne doit pas être vide' },
@@ -58,6 +58,10 @@ module.exports = (sequelize, DataTypes) => {
         refAgence: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_agences",
+                key : "id"
+            },
             validate:{
                 isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
                 notNull : { msg: '\'refAgence\' est une propriete requise' }

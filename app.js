@@ -50,6 +50,8 @@ require('./src/routes/notationProduit/findAllNotationProduits')(app)
 require('./src/routes/statsVisualize/createStatsVisualize')(app)
 require('./src/routes/statsVisualize/findAllStatsVisualizes')(app)
 
+require('./src/routes/livreur/createLivreur')(app)
+
 
 
 app.get('/delicious_food_api/home', (req, res) => {
