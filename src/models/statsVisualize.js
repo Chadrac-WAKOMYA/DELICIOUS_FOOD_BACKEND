@@ -6,40 +6,48 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true
         },
         dateStat: {
-            type: DataTypes.timestamps,
+            type: DataTypes.DATE,
             allowNull: false,
             validate:{
                 notEmpty : { msg: '\'dateStat\' ne doit pas être vide' },
                 notNull : { msg: '\'dateStat\' est une propriété requise' }
             }
         },
-        isProductCheking: {
+        isProduitChecking: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             validate:{
-                notEmpty : { msg: '\'isProductCheking\' ne doit pas être vide' },
-                notNull : { msg: '\'isProductCheking\' est une propriété requise' }
+                notEmpty : { msg: '\'isProduitChecking\' ne doit pas être vide' },
+                notNull : { msg: '\'isProduitChecking\' est une propriété requise' }
             }
         },
-        isRestaurantCheking: {
+        isAgenceChecking: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             validate:{
-                notEmpty : { msg: '\'isRestaurantCheking\' ne doit pas être vide' },
-                notNull : { msg: '\'isRestaurantCheking\' est une propriété requise' }
+                notEmpty : { msg: '\'isAgenceChecking\' ne doit pas être vide' },
+                notNull : { msg: '\'isAgenceChecking\' est une propriété requise' }
             }
         },
         refClient: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_clients",
+                key : "id"
+            },
             validate:{
-                isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
+                isInt : { msg: 'Uniquement les nombres entiers sont valides pour refClient' },
                 notNull : { msg: '\'refClient\' est une propriete requise' }
             },
         },
-        refRestaurant: {
+        refAgence: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_agences",
+                key : "id"
+            },
             validate:{
                 isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
                 notNull : { msg: '\'refRestaurant\' est une propriete requise' }
@@ -48,8 +56,12 @@ module.exports = (sequelize, DataTypes) => {
         refProduit: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            references : {
+                model : "tb_produits",
+                key : "id"
+            },
             validate:{
-                isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
+                isInt : { msg: 'Uniquement les nombres entiers sont valides pour refProduit' },
                 notNull : { msg: '\'refProduit\' est une propriete requise' }
             },
         }

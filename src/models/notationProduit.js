@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
                 key : "id"
             },
             validate:{
-                isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
+                isInt : { msg: 'Uniquement les nombres entiers sont valides pour refProduit' },
                 notNull : { msg: '\'refProduit\' est une propriete requise' }
             },
         },
@@ -49,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
                 key : "id"
             },
             validate:{
-                isInt : { msg: 'Uniquement les nombres entiers sont valides pour refAgence' },
+                isInt : { msg: 'Uniquement les nombres entiers sont valides pour refClient' },
                 notNull : { msg: '\'refClient\' est une propriete requise' }
             },
         }
