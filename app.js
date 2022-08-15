@@ -30,6 +30,8 @@ require('./src/routes/commande/findAllCommandes')(app)
 
 require('./src/routes/agence/createAgence')(app)
 require('./src/routes/agence/findAllAgences')(app)
+require('./src/routes/agence/findAllAgencesByPK')(app)
+require('./src/routes/agence/deleteAgence')(app)
 
 require('./src/routes/categorieProduit/createCategorieProduit')(app)
 require('./src/routes/categorieProduit/findAllCategorieProduits')(app)
@@ -51,7 +53,7 @@ require('./src/routes/statsVisualize/createStatsVisualize')(app)
 require('./src/routes/statsVisualize/findAllStatsVisualizes')(app)
 
 require('./src/routes/livreur/createLivreur')(app)
-
+require('./src/routes/livreur/findAllLivreurs')(app)
 
 
 app.get('/delicious_food_api/home', (req, res) => {
