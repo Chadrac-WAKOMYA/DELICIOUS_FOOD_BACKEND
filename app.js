@@ -41,6 +41,7 @@ require('./src/routes/imageProduit/createImageProduit')(app)
 require('./src/routes/imageProduit/findAllImageProduits')(app)
 
 require('./src/routes/detailCommande/createDetailCommande')(app)
+require('./src/routes/detailCommande/findAllDetailCommandes')(app)
 
 
 
