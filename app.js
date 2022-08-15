@@ -45,6 +45,7 @@ require('./src/routes/detailCommande/findAllDetailCommandes')(app)
 
 
 require('./src/routes/notationProduit/createNotationProduit')(app)
+require('./src/routes/notationProduit/findAllNotationProduits')(app)
 
 
 
