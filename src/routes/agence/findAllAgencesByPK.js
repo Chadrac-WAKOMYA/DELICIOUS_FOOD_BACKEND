@@ -5,14 +5,14 @@ module.exports = (app) => {
     Agence.findByPk(req.params.id)
       .then(agence => {
         if(agence === null){
-            const message = "Le bareme demandé n\'existe pas, essayez avec un autre identifiant"
+            const message = "L'\ agence demandée n\'existe pas, essayez avec un autre identifiant"
             res.status(404).json({message})
         }
         const message = 'Une agence a bien été trouvée.'
         res.json({ message, data: agence })
       })
       .catch(error => {
-        const message = "L'\agence n\'a pas pu etre recuperée, reessayez dans quelques instants"
+        const message = "L'\ agence n\'a pas pu etre recuperée, reessayez dans quelques instants"
         res.status(500).json({message, data: error})
       })
   })
