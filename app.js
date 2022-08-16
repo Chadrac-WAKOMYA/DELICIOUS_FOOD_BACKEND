@@ -37,6 +37,7 @@ require('./src/routes/agence/updateAgence')(app)
 require('./src/routes/categorieProduit/createCategorieProduit')(app)
 require('./src/routes/categorieProduit/findAllCategorieProduits')(app)
 require('./src/routes/categorieProduit/findAllCategorieProduitByPK')(app)
+require('./src/routes/categorieProduit/updateCategorieProduit')(app)
 
 require('./src/routes/produit/createProduit')(app)
 require('./src/routes/produit/findAllProduits')(app)
