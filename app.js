@@ -27,6 +27,7 @@ require('./src/routes/bareme/deleteBareme')(app)
 
 require('./src/routes/commande/createCommande')(app)
 require('./src/routes/commande/findAllCommandes')(app)
+require('./src/routes/commande/findAllCommandeByPK')(app)
 
 require('./src/routes/agence/createAgence')(app)
 require('./src/routes/agence/findAllAgences')(app)
