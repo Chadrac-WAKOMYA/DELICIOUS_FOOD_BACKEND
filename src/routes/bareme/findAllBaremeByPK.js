@@ -12,7 +12,7 @@ module.exports = (app) => {
         res.json({ message, data: bareme })
       })
       .catch(error => {
-        const message = "Le bareme n\'a pas pu etre recuperée, reessayez dans quelques instants"
+        const message = "Le bareme n\'a pas pu etre recuperé, reessayez dans quelques instants"
         res.status(500).json({message, data: error})
       })
   })
