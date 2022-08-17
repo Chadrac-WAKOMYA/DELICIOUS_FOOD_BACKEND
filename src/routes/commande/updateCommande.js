@@ -13,7 +13,7 @@ module.exports = (app) => {
             const message = "La commande demandée n\'existe pas, essayez avec un autre identifiant"
             res.status(404).json({message})
         }
-        const message = `La commande ${commande.name} a bien été modifiée.`
+        const message = `La commande ${commande.id} a bien été modifiée.`
         res.json({message, data: commande })
       })
     })

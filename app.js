@@ -67,6 +67,7 @@ require('./src/routes/statsVisualize/findAllStatsVisualizes')(app)
 
 require('./src/routes/livreur/createLivreur')(app)
 require('./src/routes/livreur/findAllLivreurs')(app)
+require('./src/routes/livreur/findAllLivreurByPK')(app)
 
 
 app.get('/delicious_food_api/home', (req, res) => {
