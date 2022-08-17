@@ -50,6 +50,7 @@ require('./src/routes/imageProduit/createImageProduit')(app)
 require('./src/routes/imageProduit/findAllImageProduits')(app)
 require('./src/routes/imageProduit/findAllImageProduitByPK')(app)
 require('./src/routes/imageProduit/updateImageProduit')(app)
+require('./src/routes/imageProduit/deleteImageProduit')(app)
 
 require('./src/routes/detailCommande/createDetailCommande')(app)
 require('./src/routes/detailCommande/findAllDetailCommandes')(app)
