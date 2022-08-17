@@ -46,6 +46,7 @@ require('./src/routes/categorieProduit/deleteCategorieProduit')(app)
 require('./src/routes/produit/createProduit')(app)
 require('./src/routes/produit/findAllProduits')(app)
 require('./src/routes/produit/findAllProduitByPK')(app)
+require('./src/routes/produit/updateProduit')(app)
 
 require('./src/routes/imageProduit/createImageProduit')(app)
 require('./src/routes/imageProduit/findAllImageProduits')(app)
