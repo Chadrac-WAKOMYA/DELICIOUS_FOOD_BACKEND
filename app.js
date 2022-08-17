@@ -71,6 +71,7 @@ require('./src/routes/notationProduit/deleteNotationProduit')(app)
 
 require('./src/routes/statsVisualize/createStatsVisualize')(app)
 require('./src/routes/statsVisualize/findAllStatsVisualizes')(app)
+require('./src/routes/statsVisualize/findAllStatsVisualizeByPK')(app)
 
 require('./src/routes/livreur/createLivreur')(app)
 require('./src/routes/livreur/findAllLivreurs')(app)
