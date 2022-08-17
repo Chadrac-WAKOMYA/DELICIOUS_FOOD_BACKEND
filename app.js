@@ -52,6 +52,7 @@ require('./src/routes/imageProduit/findAllImageProduits')(app)
 require('./src/routes/detailCommande/createDetailCommande')(app)
 require('./src/routes/detailCommande/findAllDetailCommandes')(app)
 require('./src/routes/detailCommande/findAllDetailCommandeByPK')(app)
+require('./src/routes/detailCommande/updateDetailCommande')(app)
 
 
 require('./src/routes/notationProduit/createNotationProduit')(app)
