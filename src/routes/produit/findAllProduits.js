@@ -1,4 +1,4 @@
-const { ImageProduit } = require('../../db/sequelize')
+const { Produit } = require('../../db/sequelize')
   
 module.exports = (app) => {
   app.get('/delicious_food_api/produits', (req, res) => {
