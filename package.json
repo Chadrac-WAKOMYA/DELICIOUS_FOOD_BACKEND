@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "NODE_ENV=production node app.js",
+    "dev": "NODE_ENV=development nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,6 @@
   },
   "homepage": "https://github.com/Chadrac-WAKOMYA/DELICIOUS_FOOD_BACKEND#readme",
   "devDependencies": {
-    "morgan": "^1.10.0",
     "nodemon": "^2.0.19"
   },
   "dependencies": {

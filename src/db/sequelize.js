@@ -10,7 +10,7 @@ const DetailCommandeModel = require('../models/detailCommande')
 const NotationProduitModel = require('../models/notationProduit')
 const StatsVisualizeModel = require('../models/statsVisualize')
 const LivreurModel = require('../models/livreur')
-
+// const items = {};
 const sequelize = new Sequelize('delicious_food_db', 'root', '', {
   host: 'localhost',
   dialect: 'mariadb',
