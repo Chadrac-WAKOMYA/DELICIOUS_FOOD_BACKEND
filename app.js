@@ -3,10 +3,8 @@ const bodyParser = require('body-parser')
 const sequelize = require('./src/db/sequelize')
 
 const app = express()
-const port = process.env.PORT || 3000
-
-app
-    .use(bodyParser.json())
+const port = process.env.PORT || 3500
+app.use(express.json());
 
 sequelize.initDb()
 
